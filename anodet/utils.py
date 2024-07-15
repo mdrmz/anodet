@@ -10,15 +10,15 @@ from PIL import Image
 import os
 
 
-standard_image_transform = T.Compose([T.Resize(640),
-                                      T.CenterCrop(640),
+standard_image_transform = T.Compose([T.Resize(320),
+                                      T.CenterCrop(320),
                                       T.ToTensor(),
                                       T.Normalize(mean=[0.485, 0.456, 0.406],
                                                   std=[0.229, 0.224, 0.225])
                                       ])
 
-standard_mask_transform = T.Compose([T.Resize(640),
-                                     T.CenterCrop(640),
+standard_mask_transform = T.Compose([T.Resize(320),
+                                     T.CenterCrop(320),
                                      T.ToTensor()
                                      ])
 
